@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matcha Monday</title>
+  <style>
+    body {
+      background-color: #d9e5c9;
+      font-family: 'Chicago', 'Courier New', Courier, monospace;
+      color: #2f4f2f;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-decoration: underline;
+    }
+    .section {
+      margin-top: 2em;
+      border-top: 1px solid #556b2f;
+      padding-top: 1em;
+    }
+    .achievements-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .achievement-item {
+      width: 150px;
+      text-align: center;
+    }
+    .achievement-item img {
+      width: 100%;
+      border: 1px solid #2f4f2f;
+    }
+    .ascii {
+      font-size: 14px;
+      text-align: center;
+      white-space: pre;
+    }
+    a {
+      color: #006400;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌿 Matcha Monday 🌿</h1>
+    <div class="ascii">
+      M A T C H A   M O N D A Y
+      --------------------------
+         (every Monday @ 8am)
+         Parami Cafe, Sydney
+      --------------------------
+    </div>
+
+    <div class="section">
+      <h2>Welcome</h2>
+      <p>We are a casual community of matcha lovers, founders, builders, artists, and curious minds. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you 🫖</p>
+    </div>
+
+    <div class="section">
+      <h2>Member Achievements</h2>
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Thumbnails will be loaded here -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Join Us</h2>
+      <p>No RSVP required. Just show up. Bring friends. Bring ideas. Bring matcha energy.</p>
+      <p>Email us at <a href="mailto:matchamondays@protonmail.com">matchamondays@protonmail.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    const grid = document.getElementById('achievements-grid');
+    const achievementFiles = [
+      'achievements/alex.json',
+      'achievements/jamie.json',
+      'achievements/priya.json'
+    ];
+
+    Promise.all(achievementFiles.map(file => fetch(file).then(res => res.json())))
+      .then(entries => {
+        entries.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'achievement-item';
+          div.innerHTML = `
+            <a href="${item.url}" target="_blank">
+              <img src="${item.img}" alt="${item.name} Achievement">
+              <div>${item.name} – ${item.desc}</div>
+            </a>
+          `;
+          grid.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
