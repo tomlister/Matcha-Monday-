@@ -33,10 +33,5 @@ const achievementFiles = [
 ];
 ```
 
-## 🛠 Hosting
-
-This site works great with [GitHub Pages](https://pages.github.com/). Just push your repo and enable Pages in the settings.
-
----
 
 🧃 First matcha’s on you!
