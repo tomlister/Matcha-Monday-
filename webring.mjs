@@ -11,7 +11,12 @@ const RING = [
     url: "https://maxbo.me",
     name: "Max Bo",
     feed: "https://maxbo.me/atom.xml"
-  }
+  },
+  {
+    url: "https://liamzebedee.com",
+    name: "Liam Zebedee",
+    feed: "https://liamzebedee.com/atom.xml"
+  },
 ];
 
 /**
