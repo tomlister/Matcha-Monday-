@@ -13,7 +13,7 @@ const RING = [
     feed: "https://maxbo.me/atom.xml"
   },
   {
-    url: "https://borretti.me/",
+    url: "https://borretti.me",
     name: "Fernando Borretti",
     feed: "https://borretti.me/feed.xml"
   }
