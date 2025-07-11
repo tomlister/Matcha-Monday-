@@ -125,9 +125,9 @@
       for (const site of ring) {
         const li = document.createElement('li');
         li.innerHTML = `
-          <a href="${site.url}" target="_blank">
+          <a href="${site.url}">
             <img src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&size=16&url=${site.url}" style="vertical-align: middle; margin-right: 5px;">${site.name}</a>
-          ${site.feed ? `<a href="${site.feed}" target="_blank"><img src="Feed-icon.svg" alt="RSS Feed" style="width: 12px; height: 12px; vertical-align: middle;"></a>` : ''}
+          ${site.feed ? `<a href="${site.feed}"><img src="Feed-icon.svg" alt="RSS Feed" style="width: 12px; height: 12px; vertical-align: middle;"></a>` : ''}
         `;
 
         webringList.appendChild(li);
