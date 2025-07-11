@@ -33,21 +33,29 @@
       font-weight: bold;
       font-style: normal;
     }
-    /* https://unifoundry.com/unifont/index.html */
+    /* https://github.com/stgiga/UnifontEX */
     @font-face {
       font-family: 'unifont';
-      src: url('fonts/subset-unifont.woff2') format('woff2');
+      src: url('fonts/UnifontExMono.woff2') format('woff2');
     }
     /* https://cinni.net/font */
-    @font-face {
+    /* @font-face {
       font-family: 'basiic';
       src: url('fonts/basiic.ttf') format('truetype');
-    }
-
+    } */
+    /* https://departuremono.com/ */
+    /* @font-face {
+      font-family: 'Departure Mono';
+      src: url('fonts/DepartureMono-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    } */
 
     body {
       background-color: #d9e5c9;
-      font-family: 'Redaction 35', monospace;
+      font-family: 'Redaction 35', serif;
+      image-rendering: pixelated;
+      text-rendering: optimizeSpeed;
       color: #2f4f2f;
       margin: 0;
       padding: 0;
@@ -70,9 +78,29 @@
     }
 
     section {
-      border-bottom: 1px solid #556b2f;
       padding-top: 1em;
       padding-bottom: 3ch;
+    }
+    code {
+      font-family: 'unifont', monospace;
+      color: #4b430e;
+    }
+    .pixelated {
+      font-family: 'unifont', monospace;
+    }
+
+    pre {
+      text-align: center;
+      white-space: pre;
+    }
+    a {
+      color: #006400;
+      text-decoration: underline;
+    }
+
+    footer {
+      font-size: 0.8em;
+      margin-top: 10ch;
     }
     .achievements-grid {
       display: flex;
@@ -87,58 +115,65 @@
       width: 100%;
       border: 1px solid #2f4f2f;
     }
-    pre {
-      text-align: center;
-      white-space: pre;
-    }
-    a {
-      color: #006400;
-      text-decoration: underline;
+    main {
+      padding: 3ch;
     }
 
-    footer {
-      font-size: 0.8em;
-      margin-top: 10ch;
+    /* https://maxbittker.github.io/broider/ */
+    .bottom-wave {
+        border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAI9JREFUWEft0sEJgDAQRNGkIquxCuuxCquxIsWDFyGQbD7Cws9ZxsnL1JLk1CQ9i0Xpl1JUUVqAznOjitICdJ4bVZQWoPPcqKK0AJ3nRhWlBeg8N6ooLUDnuVFFaQE6z40qSgvQeeGNrttyPWWO/QxnjFwm/JM0RV+N3sK937WUw6Lpin4Lt0Rmtzwt+lfRG+vIICtVdm8fAAAAAElFTkSuQmCC") 14 /  14px / 0 round;
+        border-width:  14px;
+        image-rendering: pixelated;
+        border-style:  solid;
     }
-    .deco {
-      font-size: 2em;
-      color: #556b2f;
-      text-wrap: nowrap;
-      overflow: hidden;
+    .leaves {
+      border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAYRJREFUWEfdmMEVwiAQRE1FVmMV1mMVVmNF+jyQw8Z5fxYID/QWCewwzO4O2S6dfrf79f1rqefjtfUI0WWRL5BhQGsDlXmFOXpW7FL8nVF6kQIMBxo1FRmKgInB7Pyyfpx3YHRZoGqHSirlfdpwlmlkdDqgChABVcxR7VT1VTF9qKPqRUqauKHTgbYySxtS40rb5X/ZmWqZHQ5UHWUvTVLWR+lgr49laDqgBJCSxR1346BGSeQuIPIKFEeakmgyYqBan6kYJFO0DlDKPio32aN3y16sOttyQLPM9NKoG3dn1J1A2UnrkD1U8+XRZ7VEALMuzNbodEDJnql62lujFMe+hbqtjiRAhV3FWa+FRiZ6MZhlWEkKbZ7r+AkQ2UPS/PpAyeW4n3Bcr0CtPJ1MFDg7TtKSlzvamdsCa7+UNN/rqTGQsSamidnmTzqUzWoD7smV9f8HaHbn7hHTUcd1kNFpgVJSqFbr1lX32hwNuu2eKMAwoNSraZzsG82ncbvX00JnA/0AVoDj3UhpAEMAAAAASUVORK5CYII=") 14 /  14px / 0 round;
+      border-width:  28px;
+      image-rendering: pixelated;
+      border-style:  solid;
+    }
+    .sign {
       font-family: 'unifont', monospace;
+      border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAANdJREFUWEftmFEOgzAMQ9edbefY4TjHzsb4oRMyimJXQqST+SuKivtwLEh7wPV+Pb9474r18lmbsu+puLzQLrCfFNfK6Zladf8f0WmFdirqyRmaxxp2/5BoWaEoDMmoXcqSlYlOJzTK1XJELTQw7bBHTdREdwKsh9jcHLVW+qlloeIbM1HWs6y1TNREIwKsh1iCzlETdeCLIxi2uVhrOfBN1IGfeMDNxDYJWxcNjnEyUyaesqFcGaFIEL37P0LvGujKRKcTmg162S5n6+Suj34d2AeO1qHQDQs6YDqSjvQoAAAAAElFTkSuQmCC") 14 /  14px / 0 round;
+      border-width:  14px;
+      border-style:  solid;
+      padding: 1ch;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <div class="deco" aria-hidden="true">⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘</div>
   <div class="container">
-    <main>
+    <main class="leaves">
       <h1>🍵 <i>Matcha Monday </i>🍵</h1>
-      <pre>
---------------------------
-  (every Monday @ 8am)
-  Parami Cafe, Sydney
---------------------------
-      </pre>
+      <center>
+        <div class="sign">
+          (every Monday @ 8am) <br />
+          Parami Cafe, Sydney
+        </div>
+      </center>
 
-      <section>
+      <section class="bottom-wave">
         <h2 id="welcome">Welcome</h2>
-        <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you 🍵</p>
+        <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you <span class="pixelated">🍵</span></p>
       </section>
 
-      <section>
+      <section class="bottom-wave">
         <h2 id="member-achievements">Member achievements</h2>
         <div class="achievements-grid" id="achievements-grid">
           <!-- Thumbnails will be loaded here -->
         </div>
       </section>
 
-      <section>
+      <section class="bottom-wave">
         <h2 id="webring">Webring</h2>
+        <p>
+          Some of our community members have an online presence:
+        </p>
         <ul id="webring-members">
           <!-- Webring members will be loaded here -->
         </ul>
-        <p class="join-webring">Want to join the webring? Submit a pull request updating <a href="https://github.com/joshrees77/Matcha-Monday-/blob/main/webring.mjs">the <code>RING</code> array in webring.mjs</a> with your website details.</p>
+        <p class="join-webring">To join the webring, submit a pull request updating <a href="https://github.com/joshrees77/Matcha-Monday-/blob/main/webring.mjs">the <code>RING</code> array in webring.mjs</a> with your website details.</p>
         <p>You <b>MUST</b> add the <code>previous</code> and <code>next</code> links yielded by <code>getRingNeighbors</code> somewhere on your website. An example implementation can be seen <a href="https://github.com/MaxwellBo/maxwellbo.github.io/blob/9a10b7491534d6a0dbb82356c4ed6d21d01b35e0/index.html#L554-L575">here</a>.
       </section>
 
@@ -147,7 +182,6 @@
         <p>No RSVP required. Just show up. Bring friends. Bring ideas.</p>
         <p>Email us at <a href="mailto:josh@reescooks.club">josh@reescooks.club</a></p>
       </section>
-
     </main>
 
     <footer>
@@ -159,9 +193,9 @@
   <script>
     const grid = document.getElementById('achievements-grid');
     const achievementFiles = [
-      'achievements/alex.json',
-      'achievements/jamie.json',
-      'achievements/priya.json',
+      // 'achievements/alex.json',
+      // 'achievements/jamie.json',
+      // 'achievements/priya.json',
       'achievements/max.json'
     ];
 
