@@ -96,7 +96,8 @@
     const achievementFiles = [
       'achievements/alex.json',
       'achievements/jamie.json',
-      'achievements/priya.json'
+      'achievements/priya.json',
+      'achievements/max.json'
     ];
 
     Promise.all(achievementFiles.map(file => fetch(file).then(res => res.json())))
