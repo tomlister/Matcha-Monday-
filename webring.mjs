@@ -17,7 +17,8 @@ const RING = [
     name: "Liam Zebedee",
     feed: "https://liamzebedee.com/atom.xml"
   },
-    url: "https://borretti.me/",
+  {
+    url: "https://borretti.me",
     name: "Fernando Borretti",
     feed: "https://borretti.me/feed.xml"
   }
