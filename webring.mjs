@@ -25,6 +25,10 @@ const RING = [
     url: "https://www.ethansmith2000.com/",
     name: "Ethan Smith",
     feed: "https://www.ethansmith2000.com/blog-feed.xml"
+  }, {
+    url: "https://tomlister.net",
+    name: "Tom Lister",
+    feed: "https://tomlister.net/feed.xml"
   }
 ];
 
