@@ -50,45 +50,57 @@
       color: #006400;
       text-decoration: underline;
     }
+
+    footer {
+      font-size: 0.8em;
+      margin-top: 10ch;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🌿 Matcha Monday 🌿</h1>
-    <div class="ascii">
-      M A T C H A   M O N D A Y
-      --------------------------
-         (every Monday @ 8am)
-         Parami Cafe, Sydney
-      --------------------------
-    </div>
-
-    <div class="section">
-      <h2 id="welcome">Welcome</h2>
-      <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you 🫖</p>
-    </div>
-
-    <div class="section">
-      <h2 id="member-achievements">Member achievements</h2>
-      <div class="achievements-grid" id="achievements-grid">
-        <!-- Thumbnails will be loaded here -->
+    <main>
+      <h1>🌿 Matcha Monday 🌿</h1>
+      <div class="ascii">
+        M A T C H A   M O N D A Y
+        --------------------------
+          (every Monday @ 8am)
+          Parami Cafe, Sydney
+        --------------------------
       </div>
-    </div>
 
-    <div class="section">
-      <h2 id="webring">Webring</h2>
-      <ul id="webring-members">
-        <!-- Webring members will be loaded here -->
-      </ul>
-      <p class="join-webring">Want to join the webring? Submit a pull request updating <a href="https://github.com/joshrees77/Matcha-Monday-/blob/main/webring.mjs">the <code>RING</code> array in webring.mjs</a> with your website details.</p>
-      <p>You <b>MUST</b> add the <code>previous</code> and <code>next</code> links yielded by <code>getRingNeighbors</code> somewhere on your website. An example implementation can be seen <a href="https://github.com/MaxwellBo/maxwellbo.github.io/blob/9a10b7491534d6a0dbb82356c4ed6d21d01b35e0/index.html#L554-L575">here</a>.
-    </div>
+      <div class="section">
+        <h2 id="welcome">Welcome</h2>
+        <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you 🫖</p>
+      </div>
 
-    <div class="section">
-      <h2 id="join-us">Join us</h2>
-      <p>No RSVP required. Just show up. Bring friends. Bring ideas.</p>
-      <p>Email us at <a href="mailto:josh@reescooks.club">josh@reescooks.club</a></p>
-    </div>
+      <div class="section">
+        <h2 id="member-achievements">Member achievements</h2>
+        <div class="achievements-grid" id="achievements-grid">
+          <!-- Thumbnails will be loaded here -->
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 id="webring">Webring</h2>
+        <ul id="webring-members">
+          <!-- Webring members will be loaded here -->
+        </ul>
+        <p class="join-webring">Want to join the webring? Submit a pull request updating <a href="https://github.com/joshrees77/Matcha-Monday-/blob/main/webring.mjs">the <code>RING</code> array in webring.mjs</a> with your website details.</p>
+        <p>You <b>MUST</b> add the <code>previous</code> and <code>next</code> links yielded by <code>getRingNeighbors</code> somewhere on your website. An example implementation can be seen <a href="https://github.com/MaxwellBo/maxwellbo.github.io/blob/9a10b7491534d6a0dbb82356c4ed6d21d01b35e0/index.html#L554-L575">here</a>.
+      </div>
+
+      <div class="section">
+        <h2 id="join-us">Join us</h2>
+        <p>No RSVP required. Just show up. Bring friends. Bring ideas.</p>
+        <p>Email us at <a href="mailto:josh@reescooks.club">josh@reescooks.club</a></p>
+      </div>
+
+    </main>
+
+    <footer>
+      © 2025 • <a href="https://github.com/joshrees77/Matcha-Monday-">Source</a>
+    </footer>
   </div>
 
   <script>
@@ -135,5 +147,6 @@
       }
     });
   </script>
+
 </body>
 </html>
