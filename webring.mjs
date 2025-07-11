@@ -15,12 +15,16 @@ const RING = [
   {
     url: "https://liamzebedee.com",
     name: "Liam Zebedee",
-    feed: "https://liamzebedee.com/atom.xml"
+    feed: "https://liamzebedee.com/index.xml"
   },
   {
     url: "https://borretti.me",
     name: "Fernando Borretti",
     feed: "https://borretti.me/feed.xml"
+  }, {
+    url: "https://www.ethansmith2000.com/",
+    name: "Ethan Smith",
+    feed: "https://www.ethansmith2000.com/blog-feed.xml"
   }
 ];
 
