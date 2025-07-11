@@ -4,10 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matcha Monday</title>
+  <meta property="og:title" content="Matcha Monday">
+  <meta property="og:description" content="A casual community of matcha lovers, founders, builders, and artists. Every Monday at 8am at Parami Cafe, Sydney.">
+  <meta property="og:image" content="matcha.webp">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Matcha Monday">
+  <meta name="twitter:description" content="A casual community of matcha lovers, founders, builders, and artists. Every Monday at 8am at Parami Cafe, Sydney.">
+  <meta name="twitter:image" content="matcha.webp">
   <style>
+    /* https://www.redaction.us/ */
+    @font-face {
+      font-family: 'Redaction 35';
+      src: url('fonts/Redaction_35-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Redaction 35';
+      src: url('fonts/Redaction_35-Italic.woff2') format('woff2');
+      font-weight: normal;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: 'Redaction 35';
+      src: url('fonts/Redaction_35-Bold.woff2') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+    }
+    /* https://unifoundry.com/unifont/index.html */
+    @font-face {
+      font-family: 'unifont';
+      src: url('fonts/subset-unifont.woff2') format('woff2');
+    }
+    /* https://cinni.net/font */
+    @font-face {
+      font-family: 'basiic';
+      src: url('fonts/basiic.ttf') format('truetype');
+    }
+
+
     body {
       background-color: #d9e5c9;
-      font-family: 'Chicago', 'Courier New', Courier, monospace;
+      font-family: 'Redaction 35', monospace;
       color: #2f4f2f;
       margin: 0;
       padding: 0;
@@ -17,12 +57,18 @@
       margin: 0 auto;
       padding: 20px;
     }
+    
     h1 {
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 0.5em;
-      text-decoration: underline;
     }
+
+    h2, h3, h4, h5, h6 {
+      font-family: 'Redaction 35', serif;
+      font-style: italic;
+    }
+
     section {
       border-bottom: 1px solid #556b2f;
       padding-top: 1em;
@@ -41,8 +87,7 @@
       width: 100%;
       border: 1px solid #2f4f2f;
     }
-    .ascii {
-      font-size: 14px;
+    pre {
       text-align: center;
       white-space: pre;
     }
@@ -55,23 +100,30 @@
       font-size: 0.8em;
       margin-top: 10ch;
     }
+    .deco {
+      font-size: 2em;
+      color: #556b2f;
+      text-wrap: nowrap;
+      overflow: hidden;
+      font-family: 'unifont', monospace;
+    }
   </style>
 </head>
 <body>
+  <div class="deco" aria-hidden="true">⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘ ⚘</div>
   <div class="container">
     <main>
-      <h1>🌿 Matcha Monday 🌿</h1>
-      <div class="ascii">
-        M A T C H A   M O N D A Y
-        --------------------------
-          (every Monday @ 8am)
-          Parami Cafe, Sydney
-        --------------------------
-      </div>
+      <h1>🍵 <i>Matcha Monday </i>🍵</h1>
+      <pre>
+--------------------------
+  (every Monday @ 8am)
+  Parami Cafe, Sydney
+--------------------------
+      </pre>
 
       <section>
         <h2 id="welcome">Welcome</h2>
-        <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you 🫖</p>
+        <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you 🍵</p>
       </section>
 
       <section>
@@ -101,6 +153,7 @@
     <footer>
       © 2025 • <a href="https://github.com/joshrees77/Matcha-Monday-">Source</a>
     </footer>
+
   </div>
 
   <script>
