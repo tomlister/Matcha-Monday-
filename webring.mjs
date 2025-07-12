@@ -56,6 +56,7 @@ export function getRingNeighbors(url) {
     
     // Use absolute value in case of negative hash
     posIndex = Math.abs(hash) % RING.length;
+    console.warn(`URL "${url}" not found in webring. Using random position ${posIndex} in the ring.`);
   }
   
   const previousIndex = (posIndex - 1 + RING.length) % RING.length;
