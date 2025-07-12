@@ -15,6 +15,10 @@
   <meta name="twitter:image" content="matcha.webp">
   <link rel="icon" type="image/gif" href="matcha.gif">
 
+  <link 
+    rel="stylesheet" 
+    href="https://esm.sh/jsr/@celine/celine@4.8.0/cell.css" />
+
   <style>
     /* https://www.redaction.us/ */
     @font-face {
@@ -52,6 +56,10 @@
       font-weight: normal;
       font-style: normal;
     } */
+
+    pre {
+      margin: 0;
+    }
 
     body {
       background-color: #d9e5c9;
@@ -91,10 +99,6 @@
       font-family: 'unifont', monospace;
     }
 
-    pre {
-      text-align: center;
-      white-space: pre;
-    }
     a {
       color: #006400;
       text-decoration: underline;
@@ -172,7 +176,30 @@
           <!-- Webring members will be loaded here -->
         </ul>
         <p class="join-webring">To join the webring, submit a pull request updating <a href="https://github.com/joshrees77/Matcha-Monday-/blob/main/webring.mjs">the <code>RING</code> array in webring.mjs</a> with your website details.</p>
-        <p>You <b>MUST</b> add the <code>previous</code> and <code>next</code> links yielded by <code>getRingNeighbors</code> somewhere on your website. An example implementation can be seen <a href="https://github.com/MaxwellBo/maxwellbo.github.io/blob/9a10b7491534d6a0dbb82356c4ed6d21d01b35e0/index.html#L554-L575">here</a>.
+        <p>You <b>MUST</b> add the <code>previous</code> and <code>next</code> links yielded by <code>getRingNeighbors</code> somewhere on your website.</p>
+
+        <p><i>Example:</i></p>
+
+        <div id="example"><span id="previous"><i>Loading...</i></span> <span id="next"><i>Loading...</i></span>
+
+<script type="module" >
+  import { getRingNeighbors } from 'https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-/webring.mjs';
+  const neighbors = getRingNeighbors("https://maxbo.me");
+  const previous = document.getElementById('previous');
+  const next = document.getElementById('next');
+  previous.innerHTML = `<a href="${neighbors.previous.url}">← ${neighbors.previous.name}</a>`
+  next.innerHTML = `<a href="${neighbors.next.url}">${neighbors.next.name} →</a>`
+</script></div>
+        <pre>
+          <code id="implementation" class="echo">
+          </code>
+        </pre>
+        <script>
+          const example = document.getElementById('example');
+          const codeElement = document.getElementById('implementation');
+          codeElement.textContent = example.innerHTML;
+        </script>
+          <p>An more complete example implementation can be seen <a href="https://github.com/MaxwellBo/maxwellbo.github.io/blob/9a10b7491534d6a0dbb82356c4ed6d21d01b35e0/index.html#L554-L575">here</a>.</p>
         <p>After merging your pull request, you'll need to submit <code>https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-</code> to the <a href="https://www.jsdelivr.com/tools/purge">Purge jsDelivr CDN cache</a> page to ensure all sites in the webring are updated with your changes.</p>
       </section>
 
