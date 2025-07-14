@@ -235,12 +235,6 @@
       </section>
 
       <section class="bottom-wave">
-        <h2 id="join-us">Join us</h2>
-        <p>No RSVP required. Just show up. Bring friends. Bring ideas.</p>
-        <p>Email us at <a href="mailto:josh@reescooks.club">josh@reescooks.club</a></p>
-      </section>
-
-      <section class="bottom-wave">
         <h2 id="attendance">Attendance</h2>
 
         <form id="attendance-form">
@@ -251,7 +245,7 @@
         </form>
         <div id="attendance-message"></div>
 
-        <h3>Leaderboard</h3>
+        <h3>Top 10 attendees</h3>
         <div id="attendance-leaderboard">
           <p><i>Loading leaderboard...</i></p>
         </div>
@@ -281,6 +275,7 @@
               const formData = new FormData();
               formData.append('name', name);
 
+              // https://www.val.town/x/mbo/matchamonday/code/main.tsx
               const response = await fetch('https://matchamonday.val.run/syd/attendance', {
                 method: 'POST',
                 body: formData
@@ -319,6 +314,12 @@
           }
         });
       </script>
+
+      <section class="bottom-wave">
+        <h2 id="join-us">Join us</h2>
+        <p>No RSVP required. Just show up. Bring friends. Bring ideas.</p>
+        <p>Email us at <a href="mailto:josh@reescooks.club">josh@reescooks.club</a></p>
+      </section>
 
       <center>
         <footer>
