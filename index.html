@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matcha Monday</title>
   <meta property="og:title" content="Matcha Monday">
-  <meta property="og:description" content="A casual community of matcha lovers, founders, builders, and artists. Every Monday at 8am at Parami Cafe, Sydney.">
+  <meta property="og:description"
+    content="A casual community of matcha lovers, founders, builders, and artists. Every Monday at 8am at Parami Cafe, Sydney.">
   <meta property="og:image" content="matcha.webp">
   <meta property="og:url" content="">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Matcha Monday">
-  <meta name="twitter:description" content="A casual community of matcha lovers, founders, builders, and artists. Every Monday at 8am at Parami Cafe, Sydney.">
+  <meta name="twitter:description"
+    content="A casual community of matcha lovers, founders, builders, and artists. Every Monday at 8am at Parami Cafe, Sydney.">
   <meta name="twitter:image" content="matcha.webp">
   <link rel="icon" type="image/gif" href="matcha.gif">
 
-  <link 
-    rel="stylesheet" 
-    href="https://esm.sh/jsr/@celine/celine@4.8.0/cell.css" />
+  <link rel="stylesheet" href="https://esm.sh/jsr/@celine/celine@4.8.0/cell.css" />
 
   <style>
     /* https://www.redaction.us/ */
@@ -27,23 +28,27 @@
       font-weight: normal;
       font-style: normal;
     }
+
     @font-face {
       font-family: 'Redaction 35';
       src: url('fonts/Redaction_35-Italic.woff2') format('woff2');
       font-weight: normal;
       font-style: italic;
     }
+
     @font-face {
       font-family: 'Redaction 35';
       src: url('fonts/Redaction_35-Bold.woff2') format('woff2');
       font-weight: bold;
       font-style: normal;
     }
+
     /* https://github.com/stgiga/UnifontEX */
     @font-face {
       font-family: 'unifont';
       src: url('fonts/UnifontExMono.woff2') format('woff2');
     }
+
     /* https://cinni.net/font */
     /* @font-face {
       font-family: 'basiic';
@@ -70,19 +75,24 @@
       margin: 0;
       padding: 0;
     }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 1vw;
     }
-    
+
     h1 {
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 0.5em;
     }
 
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Redaction 35', serif;
       font-style: italic;
     }
@@ -91,10 +101,12 @@
       padding-top: 1em;
       padding-bottom: 3ch;
     }
+
     code {
       font-family: 'unifont', monospace;
       color: #4b430e;
     }
+
     .pixelated {
       font-family: 'unifont', monospace;
     }
@@ -108,42 +120,49 @@
       font-size: 0.8em;
       margin-top: 10ch;
     }
+
     .achievements-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .achievement-item {
       width: 150px;
       text-align: center;
     }
+
     .achievement-item img {
       width: 100%;
       border: 1px solid #2f4f2f;
     }
+
     /* https://maxbittker.github.io/broider/ */
     .bottom-wave {
-        border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAI9JREFUWEft0sEJgDAQRNGkIquxCuuxCquxIsWDFyGQbD7Cws9ZxsnL1JLk1CQ9i0Xpl1JUUVqAznOjitICdJ4bVZQWoPPcqKK0AJ3nRhWlBeg8N6ooLUDnuVFFaQE6z40qSgvQeeGNrttyPWWO/QxnjFwm/JM0RV+N3sK937WUw6Lpin4Lt0Rmtzwt+lfRG+vIICtVdm8fAAAAAElFTkSuQmCC") 14 /  14px / 0 round;
-        border-width:  14px;
-        image-rendering: pixelated;
-        border-style:  solid;
-    }
-    .leaves {
-      border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAYRJREFUWEfdmMEVwiAQRE1FVmMV1mMVVmNF+jyQw8Z5fxYID/QWCewwzO4O2S6dfrf79f1rqefjtfUI0WWRL5BhQGsDlXmFOXpW7FL8nVF6kQIMBxo1FRmKgInB7Pyyfpx3YHRZoGqHSirlfdpwlmlkdDqgChABVcxR7VT1VTF9qKPqRUqauKHTgbYySxtS40rb5X/ZmWqZHQ5UHWUvTVLWR+lgr49laDqgBJCSxR1346BGSeQuIPIKFEeakmgyYqBan6kYJFO0DlDKPio32aN3y16sOttyQLPM9NKoG3dn1J1A2UnrkD1U8+XRZ7VEALMuzNbodEDJnql62lujFMe+hbqtjiRAhV3FWa+FRiZ6MZhlWEkKbZ7r+AkQ2UPS/PpAyeW4n3Bcr0CtPJ1MFDg7TtKSlzvamdsCa7+UNN/rqTGQsSamidnmTzqUzWoD7smV9f8HaHbn7hHTUcd1kNFpgVJSqFbr1lX32hwNuu2eKMAwoNSraZzsG82ncbvX00JnA/0AVoDj3UhpAEMAAAAASUVORK5CYII=") 14 /  14px / 0 round;
-      border-width:  28px;
+      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAI9JREFUWEft0sEJgDAQRNGkIquxCuuxCquxIsWDFyGQbD7Cws9ZxsnL1JLk1CQ9i0Xpl1JUUVqAznOjitICdJ4bVZQWoPPcqKK0AJ3nRhWlBeg8N6ooLUDnuVFFaQE6z40qSgvQeeGNrttyPWWO/QxnjFwm/JM0RV+N3sK937WUw6Lpin4Lt0Rmtzwt+lfRG+vIICtVdm8fAAAAAElFTkSuQmCC") 14 / 14px / 0 round;
+      border-width: 14px;
       image-rendering: pixelated;
-      border-style:  solid;
+      border-style: solid;
     }
+
+    .leaves {
+      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAYRJREFUWEfdmMEVwiAQRE1FVmMV1mMVVmNF+jyQw8Z5fxYID/QWCewwzO4O2S6dfrf79f1rqefjtfUI0WWRL5BhQGsDlXmFOXpW7FL8nVF6kQIMBxo1FRmKgInB7Pyyfpx3YHRZoGqHSirlfdpwlmlkdDqgChABVcxR7VT1VTF9qKPqRUqauKHTgbYySxtS40rb5X/ZmWqZHQ5UHWUvTVLWR+lgr49laDqgBJCSxR1346BGSeQuIPIKFEeakmgyYqBan6kYJFO0DlDKPio32aN3y16sOttyQLPM9NKoG3dn1J1A2UnrkD1U8+XRZ7VEALMuzNbodEDJnql62lujFMe+hbqtjiRAhV3FWa+FRiZ6MZhlWEkKbZ7r+AkQ2UPS/PpAyeW4n3Bcr0CtPJ1MFDg7TtKSlzvamdsCa7+UNN/rqTGQsSamidnmTzqUzWoD7smV9f8HaHbn7hHTUcd1kNFpgVJSqFbr1lX32hwNuu2eKMAwoNSraZzsG82ncbvX00JnA/0AVoDj3UhpAEMAAAAASUVORK5CYII=") 14 / 14px / 0 round;
+      border-width: 28px;
+      image-rendering: pixelated;
+      border-style: solid;
+    }
+
     .sign {
       font-family: 'unifont', monospace;
-      border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAANdJREFUWEftmFEOgzAMQ9edbefY4TjHzsb4oRMyimJXQqST+SuKivtwLEh7wPV+Pb9474r18lmbsu+puLzQLrCfFNfK6Zladf8f0WmFdirqyRmaxxp2/5BoWaEoDMmoXcqSlYlOJzTK1XJELTQw7bBHTdREdwKsh9jcHLVW+qlloeIbM1HWs6y1TNREIwKsh1iCzlETdeCLIxi2uVhrOfBN1IGfeMDNxDYJWxcNjnEyUyaesqFcGaFIEL37P0LvGujKRKcTmg162S5n6+Suj34d2AeO1qHQDQs6YDqSjvQoAAAAAElFTkSuQmCC") 14 /  14px / 0 round;
-      border-width:  14px;
-      border-style:  solid;
+      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAANdJREFUWEftmFEOgzAMQ9edbefY4TjHzsb4oRMyimJXQqST+SuKivtwLEh7wPV+Pb9474r18lmbsu+puLzQLrCfFNfK6Zladf8f0WmFdirqyRmaxxp2/5BoWaEoDMmoXcqSlYlOJzTK1XJELTQw7bBHTdREdwKsh9jcHLVW+qlloeIbM1HWs6y1TNREIwKsh1iCzlETdeCLIxi2uVhrOfBN1IGfeMDNxDYJWxcNjnEyUyaesqFcGaFIEL37P0LvGujKRKcTmg162S5n6+Suj34d2AeO1qHQDQs6YDqSjvQoAAAAAElFTkSuQmCC") 14 / 14px / 0 round;
+      border-width: 14px;
+      border-style: solid;
       padding: 1ch;
       display: inline-block;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <main class="leaves">
@@ -163,7 +182,10 @@
 
       <section class="bottom-wave">
         <h2 id="welcome">Welcome</h2>
-        <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project, or just yourself. First matcha's on you <img src="matcha.gif" alt="matcha emote"></p>
+        <p>We are a casual community of matcha lovers, founders, builders, and artists. We meet every Monday at
+          <strong>Parami Cafe</strong> in Sydney at <strong>8:00am</strong>. All are welcome — bring ideas, a project,
+          or just yourself. First matcha's on you <img src="matcha.gif" alt="matcha emote">
+        </p>
       </section>
 
       <section class="bottom-wave">
@@ -181,21 +203,26 @@
         <ul id="webring-members">
           <!-- Webring members will be loaded here -->
         </ul>
-        <p class="join-webring">To join the webring, submit a pull request updating <a href="https://github.com/joshrees77/Matcha-Monday-/blob/main/webring.mjs">the <code>RING</code> array in webring.mjs</a> with your website details.</p>
-        <p>You <b>MUST</b> add the <code>previous</code> and <code>next</code> links yielded by <code>getRingNeighbors</code> somewhere on your website.</p>
+        <p class="join-webring">To join the webring, submit a pull request updating <a
+            href="https://github.com/joshrees77/Matcha-Monday-/blob/main/webring.mjs">the <code>RING</code> array in
+            webring.mjs</a> with your website details.</p>
+        <p>You <b>MUST</b> add the <code>previous</code> and <code>next</code> links yielded by
+          <code>getRingNeighbors</code> somewhere on your website.
+        </p>
 
         <p><i>Example:</i></p>
 
         <div id="example"><span id="previous"><i>Loading...</i></span> <span id="next"><i>Loading...</i></span>
 
-<script type="module" >
-  import { getRingNeighbors } from 'https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-/webring.mjs';
-  const neighbors = getRingNeighbors("https://maxbo.me");
-  const previous = document.getElementById('previous');
-  const next = document.getElementById('next');
-  previous.innerHTML = `<a href="${neighbors.previous.url}">← ${neighbors.previous.name}</a>`
-  next.innerHTML = `<a href="${neighbors.next.url}">${neighbors.next.name} →</a>`
-</script></div>
+          <script type="module">
+            import { getRingNeighbors } from 'https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-/webring.mjs';
+            const neighbors = getRingNeighbors("https://maxbo.me");
+            const previous = document.getElementById('previous');
+            const next = document.getElementById('next');
+            previous.innerHTML = `<a href="${neighbors.previous.url}">← ${neighbors.previous.name}</a>`
+            next.innerHTML = `<a href="${neighbors.next.url}">${neighbors.next.name} →</a>`
+          </script>
+        </div>
         <pre>
           <code id="implementation" class="echo">
           </code>
@@ -205,8 +232,14 @@
           const codeElement = document.getElementById('implementation');
           codeElement.textContent = example.innerHTML;
         </script>
-          <p>An more complete example implementation can be seen <a href="https://github.com/MaxwellBo/maxwellbo.github.io/blob/9a10b7491534d6a0dbb82356c4ed6d21d01b35e0/index.html#L554-L575">here</a>.</p>
-        <p>After merging your pull request, you'll need to submit <code>https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-</code> to the <a href="https://www.jsdelivr.com/tools/purge">Purge jsDelivr CDN cache</a> page to ensure all sites in the webring are updated with your changes.</p>
+        <p>An more complete example implementation can be seen <a
+            href="https://github.com/MaxwellBo/maxwellbo.github.io/blob/9a10b7491534d6a0dbb82356c4ed6d21d01b35e0/index.html#L554-L575">here</a>.
+        </p>
+        <p>After merging your pull request, you'll need to submit
+          <code>https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-</code> to the <a
+            href="https://www.jsdelivr.com/tools/purge">Purge jsDelivr CDN cache</a> page to ensure all sites in the
+          webring are updated with your changes.
+        </p>
       </section>
 
       <section class="bottom-wave">
@@ -214,6 +247,84 @@
         <p>No RSVP required. Just show up. Bring friends. Bring ideas.</p>
         <p>Email us at <a href="mailto:josh@reescooks.club">josh@reescooks.club</a></p>
       </section>
+
+      <section class="bottom-wave">
+        <h2 id="attendance">Attendance</h2>
+
+        <form id="attendance-form">
+          <input type="text" id="name-input" name="name" placeholder="Your name" required>
+          <button type="submit">
+            Check in
+          </button>
+        </form>
+        <div id="attendance-message"></div>
+
+        <h3>Leaderboard</h3>
+        <div id="attendance-leaderboard">
+          <p><i>Loading leaderboard...</i></p>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const form = document.getElementById('attendance-form');
+          const messageDiv = document.getElementById('attendance-message');
+          const leaderboardDiv = document.getElementById('attendance-leaderboard');
+          const nameInput = document.getElementById('name-input');
+
+          loadLeaderboard();
+
+          form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const name = nameInput.value.trim();
+            if (!name) {
+              alert('Please enter your name');
+              return;
+            }
+
+            try {
+              const formData = new FormData();
+              formData.append('name', name);
+
+              const response = await fetch('https://matchamonday.val.run/syd/attendance', {
+                method: 'POST',
+                body: formData
+              });
+
+              const result = await response.json();
+
+              if (response.ok) {
+                alert(result.message);
+                nameInput.value = '';
+                await loadLeaderboard();
+              } else {
+                alert(result.error);
+              }
+            } catch (error) {
+              alert(error.message);
+            }
+          });
+
+          async function loadLeaderboard() {
+            try {
+              const response = await fetch('https://matchamonday.val.run/syd/attendance');
+              const leaderboard = await response.json();
+
+              let html = '<ol>';
+              for (const [index, [name, attendance_count]] of leaderboard.entries()) {
+                const medal = index === 0 ? '🏆' : index === 1 ? '🥈' : index === 2 ? '🥉' : '  ';
+                html += `<li>${medal} <strong>${name}</strong> - ${attendance_count} ${attendance_count === 1 ? 'visit' : 'visits'}</li>`;
+              }
+              html += '</ol>';
+
+              leaderboardDiv.innerHTML = html;
+            } catch (error) {
+              leaderboardDiv.innerHTML = '<p><i>Failed to load leaderboard.</i></p>';
+            }
+          }
+        });
+      </script>
 
       <center>
         <footer>
@@ -249,14 +360,14 @@
         });
       });
   </script>
-  
+
   <script type="module">
     import { getRing } from './webring.mjs';
-    
+
     document.addEventListener('DOMContentLoaded', () => {
       const webringList = document.getElementById('webring-members');
       const ring = getRing();
-      
+
       for (const site of ring) {
         const li = document.createElement('li');
         li.innerHTML = `
@@ -271,4 +382,5 @@
   </script>
 
 </body>
+
 </html>
