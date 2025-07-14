@@ -22,7 +22,7 @@ const RING = [
     name: "Fernando Borretti",
     feed: "https://borretti.me/feed.xml"
   },{
-    url: "https://www.ethansmith2000.com/",
+    url: "https://ethansmith2000.com",
     name: "Ethan Smith",
     feed: "https://www.ethansmith2000.com/blog-feed.xml"
   }, {
