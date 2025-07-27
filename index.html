@@ -51,7 +51,18 @@
       <section class="bottom-wave">
         <h2 id="member-achievements">Member achievements</h2>
         <div class="achievements-grid" id="achievements-grid">
-          <!-- Thumbnails will be loaded here -->
+          <div class="achievement-item">
+            <a href="https://maxbo.me/is-in-the-internet-phone-book.html" target="_blank">
+              <img src="https://maxbo.me/ifb/me.webp" alt="Max Achievement">
+              <div>Max - Featured in the Internet Phone Book</div>
+            </a>
+          </div>
+          <div class="achievement-item">
+            <a href="" target="_blank">
+              <img src="https://i.imgur.com/8BcEMSg.jpeg" alt="Josh/Shaman Achievement">
+              <div>Josh/Shaman - Found PMF with AI experts and stim toys</div>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -192,29 +203,6 @@
 
 
   </div>
-
-  <script>
-    const grid = document.getElementById('achievements-grid');
-    const achievementFiles = [
-      'achievements/max.json',
-      'achievements/josh.json'
-    ];
-
-    Promise.all(achievementFiles.map(file => fetch(file).then(res => res.json())))
-      .then(entries => {
-        entries.forEach(item => {
-          const div = document.createElement('div');
-          div.className = 'achievement-item';
-          div.innerHTML = `
-            <a href="${item.url}" target="_blank">
-              <img src="${item.img}" alt="${item.name} Achievement">
-              <div>${item.name} - ${item.desc}</div>
-            </a>
-          `;
-          grid.appendChild(div);
-        });
-      });
-  </script>
 
   <script type="module">
     import { getRing } from './webring.mjs';
