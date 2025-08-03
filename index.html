@@ -96,7 +96,7 @@
         <div id="example"><span id="previous"><i>Loading...</i></span> <span id="next"><i>Loading...</i></span>
 
 <script type="module" >
-  import { getRingNeighbors } from 'https://cdn.jsdelivr.net/gh/matchamonday/matchamonday.net@latest/webring.mjs';
+  import { getRingNeighbors } from 'https://matchamonday.net/webring.mjs';
   const neighbors = getRingNeighbors("https://maxbo.me");
   const previous = document.getElementById('previous');
   const next = document.getElementById('next');
@@ -112,7 +112,10 @@
           const codeElement = document.getElementById('implementation');
           codeElement.textContent = example.innerHTML;
         </script>
-        <p>After merging your pull request, you'll need to submit <code>https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-</code> to the <a href="https://www.jsdelivr.com/tools/purge">Purge jsDelivr CDN cache</a> page to ensure all sites in the webring are updated with your changes.</p>
+        <p>After merging your pull request, you'll need to submit the following URLs to the <a href="https://www.jsdelivr.com/tools/purge">Purge jsDelivr CDN cache</a> page to ensure all sites in the webring are updated with your changes:</p>
+        <pre><code>https://cdn.jsdelivr.net/gh/joshrees77/Matcha-Monday-
+https://cdn.jsdelivr.net/gh/matchamonday/matchamonday.net
+      </code></pre>
       </section>
 
       <section class="bottom-wave">
