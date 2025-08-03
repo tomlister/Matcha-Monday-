@@ -29,7 +29,11 @@ const RING = [
     url: "https://tomlister.net",
     name: "Tom Lister",
     feed: "https://tomlister.net/feed.xml"
-  }
+  }, {
+    url: "https://samisgrove.com",
+    name: "Sam Isgrove",
+    feed: "https://samisgrove.com/feed.xml"
+  },
 ];
 
 /**
